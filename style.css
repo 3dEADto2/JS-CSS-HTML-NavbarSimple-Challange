@@ -81,9 +81,20 @@ html {
     visibility: hidden;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 .navbar-shown {
     position: static;
-    visibility: visible;
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
 }
 
 .small-screen-navbar div {
