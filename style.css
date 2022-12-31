@@ -99,6 +99,7 @@ html {
 
 .small-screen-navbar div {
     padding: 5px;
+    transition: margin-left 0.3s linear;
 }
 
 .small-screen-navbar div:hover {
