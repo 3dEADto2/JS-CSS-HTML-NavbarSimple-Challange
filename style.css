@@ -1,0 +1,153 @@
+/*
+============================ CSS Reset ============================
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*
+============================ Main Container ============================
+*/
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+============================ Header / Top Container ============================
+*/
+
+.top-container {
+    height: 80px;
+    width: 100%;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-shadow {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .35);
+}
+
+.top-navbar {
+    display: flex;
+    gap: 10px 10px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.top-navbar div:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-icon {
+    height: 32px;
+    width: 32px;
+    position: static;
+    visibility: visible;
+}
+
+.menu-icon:hover {
+    height: 34px;
+    width: 34px;
+    cursor: pointer;
+}
+
+/*
+============================ Navbar under Header ============================
+*/
+
+.small-screen-navbar {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .35);
+    width: 100%;
+    padding: 15px 0px 15px 35px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+}
+
+.navbar-shown {
+    position: static;
+    visibility: visible;
+}
+
+.small-screen-navbar div {
+    padding: 5px;
+}
+
+.small-screen-navbar div:hover {
+    margin-left: 5px;
+    background-color: rgba(233, 73, 73, .25);
+    cursor: pointer;
+}
+
+/*
+============================ Content Container ============================
+*/
+
+.content-overflow-container {
+    overflow-y: auto;
+}
+
+.content-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 10px;
+}
+
+.text-element{
+    height: 1000px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+============================ Navbar Buttons ============================
+*/
+
+.navbar-button {
+    color: gray;
+}
+
+/*
+============================ @media Desktop ============================
+*/
+
+@media (min-width: 600px) {
+    .top-container {
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, .35);
+    }
+
+    .top-navbar {
+        position: static;
+        visibility: visible;
+    }
+
+    .menu-icon {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .small-screen-navbar {
+        position: absolute;
+        visibility: hidden;
+    }
+}
